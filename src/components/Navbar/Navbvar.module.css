@@ -44,6 +44,7 @@
     align-items: center;
     overflow: hidden;
     text-transform: uppercase;
+    pointer-events: none;
 }
 
 .icon .ul .li .a {
