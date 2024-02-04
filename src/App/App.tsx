@@ -3,6 +3,7 @@ import style from './App.module.css';
 import Navbar from "../components/Navbar/Navbar";
 import PageHeroNext from "../page/page-hero-next/page-hero-next";
 import {Route, Routes} from "react-router-dom";
+import Footer from "../components/Footer/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       {/*</header>*/}
         <Navbar />
         <PageHeroNext />
+        <Footer />
         <Routes>
             {/*<Route path="/q-general" element={<Navbar/>}/>*/}
             {/*<Route path="/q-economy" element={<Navbar/>}/>*/}

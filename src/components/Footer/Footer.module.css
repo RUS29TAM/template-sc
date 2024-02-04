@@ -11,8 +11,8 @@
 
 .nav {
     position: fixed;
-    top: 0;
-    width: calc(100vw - 17px);
+    bottom: 0;
+    width: calc(100vw - 18px);
 
     height: 100px;
     background: #4444;
@@ -33,7 +33,7 @@
 
 .ul .li .a {
     position: relative;
-    color: #fff;
+    color: #142329;
     padding: 5px 20px;
     font-size: 1.1em;
     text-decoration: none;
@@ -48,7 +48,7 @@
 }
 
 .icon .ul .li .a {
-    color: #fff;
+    color: #142329;
 }
 
 :root {
@@ -64,6 +64,7 @@
     position: absolute;
     transform: translateY(35px);
     font-size: 1.6em;
+
 }
 
 .ul .li:hover .a .span:nth-child(2) {
@@ -84,14 +85,21 @@
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    padding: 5px 0 5px 50px;
+    padding: 5px 50px 5px 50px;
     overflow: hidden;
     pointer-events: none;
 }
 
 .brand .span {
     transition: 0.5s;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 0.7rem;
+    font-weight: 100;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
 }
 
 .brand .span:nth-child(1) {
@@ -106,7 +114,6 @@
 
 .icon {
     background: #142329;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .icon .span:nth-child(1) {
@@ -169,42 +176,42 @@
 
 /* Стили для мобильного устройства */
 
-@media screen and (max-width: 860px) {
-    .ul .li .a {
-        font-size: 0.8em;
-        padding: 1px 3px;
-    }
+/*@media screen and (max-width: 860px) {*/
+/*    .ul .li .a {*/
+/*        font-size: 0.8em;*/
+/*        padding: 1px 3px;*/
+/*    }*/
 
-    .ul .li .a .span:nth-child(2) {
-        font-size: 1.6em;
+/*    .ul .li .a .span:nth-child(2) {*/
+/*        font-size: 1.6em;*/
 
-    }
+/*    }*/
 
-    .brand {
-        font-size: 0.8em;
-    }
+/*    .brand {*/
+/*        font-size: 0.8em;*/
+/*    }*/
 
-    .brand .span:nth-child(1) {
-        font-size: 2em;
-    }
-}
+/*    .brand .span:nth-child(1) {*/
+/*        font-size: 2em;*/
+/*    }*/
+/*}*/
 
-@media screen and (max-width: 440px) {
-    .ul .li .a {
-        font-size: 0.6em;
-        padding: 1px 3px;
-    }
+/*@media screen and (max-width: 440px) {*/
+/*    .ul .li .a {*/
+/*        font-size: 0.6em;*/
+/*        padding: 1px 3px;*/
+/*    }*/
 
-    .brand {
-        font-size: 0.6em;
-        padding: 0 0 0 10px;
-    }
+/*    .brand {*/
+/*        font-size: 0.6em;*/
+/*        padding: 0 0 0 10px;*/
+/*    }*/
 
-    .nav .ul {
-        padding-left: 0;
-    }
+/*    .nav .ul {*/
+/*        padding-left: 0;*/
+/*    }*/
 
-    .brand .span:nth-child(1) {
-        font-size: 2em;
-    }
-}
+/*    .brand .span:nth-child(1) {*/
+/*        font-size: 2em;*/
+/*    }*/
+/*}*/
