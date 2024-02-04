@@ -1,0 +1,153 @@
+/* Основные стили */
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #142329;
+    overflow: hidden;
+    cursor: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul .li {
+    list-style: none;
+}
+
+.ul .li .a {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 1s;
+    letter-spacing: 0.1em;
+}
+
+.ul:hover .li .a {
+    opacity: 0.1;
+}
+
+.ul .li .a:hover {
+    opacity: 1;
+    cursor: none;
+}
+
+:root {
+    --x: 200px;
+    --y: 200px;
+}
+.ul .li .a .img {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: .5s;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.ul .li .a:hover .img {
+    transform: translate(-50%, -50%) scale(1);
+    transition:  0.2s;
+    opacity: 1;
+}
+
+.ul .li .a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -200%);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.25s;
+    font-size: 8vw;
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.ul .li .a:hover::before {
+    opacity: 1;
+}
+
+.cursor {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.25s, height 0.25s;
+}
+
+.ul .li:hover ~ .cursor {
+    width: 80vw;
+    height: 80vw;
+    border: 2px solid #2efc72;
+}
+
+.ul .li:hover ~ .cursor::before {
+    scale: 1;
+}
+
+.img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 16%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Медиа-запросы для адаптивности */
+
+@media (max-width: 768px) {
+    .ul .li .a {
+        font-size: 2em; /* Уменьшаем размер шрифта для мобильных устройств */
+    }
+
+    .img {
+        width: 50vw; /* Уменьшаем размер изображений для мобильных устройств */
+        height: 50vw;
+    }
+    .flexBox {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .ul .li .a {
+        font-size: 1.5em; /* Дополнительное уменьшение размера шрифта для очень маленьких экранов */
+    }
+
+    .img {
+        width: 70vw; /* Дополнительное уменьшение размера изображений для очень маленьких экранов */
+        height: 70vw;
+    }
+}
+
+.link {
+    text-decoration: none;
+}

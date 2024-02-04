@@ -1,0 +1,8 @@
+.app {
+  text-align: start;
+  width: calc(100vw - 100px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
