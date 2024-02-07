@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import style from './start-business.module.css'
-import { Button, Steps, theme  } from 'antd';
+import { Button, Steps, Typography  } from 'antd';
 import Step1 from "./utils/step-1";
 import Step2 from "./utils/step-2";
 import Step3 from "./utils/step-3";
@@ -11,7 +11,9 @@ import Step7 from "./utils/step-7";
 import Step8 from "./utils/step-8";
 import Step9 from "./utils/step-9";
 import Step10 from "./utils/step-10";
+import Timeline from "../timeline/Timeline";
 
+const { Text, Link, Title } = Typography;
 
 
 
@@ -45,33 +47,39 @@ const StartBusiness: React.FC = () => {
   const items = steps.map((item: { title: any; }) => ({ key: item.title, title: item.title }));
 
   return (
-    <div className={style.wrapper}>
-      <h1 className={style.title}>Как начать свое дело: 10 шагов для тех, кто только начинает свой путь в предпринимательстве.</h1>
-      <Steps responsive={false} className={style.stepsItem} current={current} items={items} />
-      <div className={style.contentStyle}>{steps[current].content}</div>
-      <div className={style.btnWrapper}>
-        {current === 0 && (
-          <Button className={style.btn} disabled={true} onClick={() => prev()}>
-            Назад
-          </Button>
-        )}
-        {current > 0 && (
-          <Button className={style.btn} onClick={() => prev()}>
-            Назад
-          </Button>
-        )}
-        {current < steps.length - 1 && (
-        <Button type="primary" onClick={() => next()}>
-          Вперед
-        </Button>
-      )}
-        {current === steps.length - 1 && (
-          <Button disabled={true} type="primary" onClick={() => next()}>
-            Вперед
-          </Button>
-        )}
+      <div className={style.content}>
+        <Title className={style.title}>Как начать свое дело: 10 шагов для тех, кто только начинает свой путь в
+          предпринимательстве.</Title>
+        <div className={style.wrapper}>
+          <Steps responsive={true} className={style.stepsItem} current={current} items={items}/>
+          <div className={style.contentStyle}>{steps[current].content}</div>
+
+        </div>
+        <div className={style.btnWrapper}>
+          {current === 0 && (
+              <Button className={style.btn} disabled={true} onClick={() => prev()}>
+                Назад
+              </Button>
+          )}
+          {current > 0 && (
+              <Button className={style.btn} onClick={() => prev()}>
+                Назад
+              </Button>
+          )}
+          {current < steps.length - 1 && (
+              <Button type="primary" onClick={() => next()}>
+                Вперед
+              </Button>
+          )}
+          {current === steps.length - 1 && (
+              <Button disabled={true} type="primary" onClick={() => next()}>
+                Вперед
+              </Button>
+          )}
+        </div>
+        <Timeline />
       </div>
-    </div>
+
   );
 };
 

@@ -1,0 +1,22 @@
+.timelineContainer {
+    text-align: center;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline .li {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.timeline .li:hover {
+    background-color: #ff0044;
+}
