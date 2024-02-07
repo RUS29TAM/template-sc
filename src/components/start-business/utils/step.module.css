@@ -1,49 +1,52 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  /*height: 100%;*/
-  /*padding: 25px;*/
-  /*background: #727272;*/
+.content {
+    padding: 0 10px;
 }
-.card {
-  /*width: 1000px;*/
-  /*font-size: 10px;*/
-  /*width: 500px;*/
-}
+/*.wrapper {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: flex-start;*/
+/*  align-items: center;*/
+/*  overflow: hidden;*/
+/*  width: 100%;*/
+/*  !*height: 100%;*!*/
+/*  !*padding: 25px;*!*/
+/*  !*background: #727272;*!*/
+/*}*/
+/*.card {*/
+/*  !*width: 1000px;*!*/
+/*  !*font-size: 10px;*!*/
+/*  !*width: 500px;*!*/
+/*}*/
 
-.cardTitle {
+/*.cardTitle {*/
 
-  text-wrap: initial;
-  word-wrap: break-word;
-  word-break: break-all;
-}
+/*  text-wrap: initial;*/
+/*  word-wrap: break-word;*/
+/*  word-break: break-all;*/
+/*}*/
 
-.span {
-  font-weight: bold;
-  color: #0294fb;
-}
+/*.span {*/
+/*  font-weight: bold;*/
+/*  color: #0294fb;*/
+/*}*/
 
-/* Для ширин от 1024px до 1279px */
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .card {
-    font-size: 12px;
-  }
-}
+/*!* Для ширин от 1024px до 1279px *!*/
+/*@media screen and (min-width: 1024px) and (max-width: 1279px) {*/
+/*  .card {*/
+/*    font-size: 12px;*/
+/*  }*/
+/*}*/
 
-/* Для ширин от 768px до 1023px */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .card {
-    font-size: 10px;
-  }
-}
+/*!* Для ширин от 768px до 1023px *!*/
+/*@media screen and (min-width: 768px) and (max-width: 1023px) {*/
+/*  .card {*/
+/*    font-size: 10px;*/
+/*  }*/
+/*}*/
 
-/* Для ширин от 320px до 767px */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .card {
-    font-size: 8px;
-  }
-}
+/*!* Для ширин от 320px до 767px *!*/
+/*@media screen and (min-width: 320px) and (max-width: 767px) {*/
+/*  .card {*/
+/*    font-size: 8px;*/
+/*  }*/
+/*}*/
