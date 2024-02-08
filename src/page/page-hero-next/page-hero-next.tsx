@@ -6,16 +6,6 @@ import { Link } from "react-router-dom";
 const PageHeroNext: React.FC = () => {
   const screenWidth = window.innerWidth;
 
-  // if (screenWidth <= 1040) {
-  //   return (
-  //     <div className={style.wrapper}>
-  //       <div className={style.container}>
-  //         <ScrollingAnimation />
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
     let pos = document.documentElement;
     pos.addEventListener("mousemove", ev => {
         pos.style.setProperty('--x', ev.clientX + 'px')
