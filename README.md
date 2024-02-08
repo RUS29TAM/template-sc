@@ -1,1 +1,1 @@
-# template-sc
+# template-sc/
